@@ -16,6 +16,32 @@ def normalize_string(string):
 
 
 # function to normalize data directory
+
+def normalize_dir(data):
+    count = 0
+    invalid_count = 0
+    dir = dict()
+
+    for __class__ in data.keys():
+        for __list__ in data[__class__]:
+            temp_list = list()
+            for string in __list__:
+                count += 1
+                try:
+                    # here does the normalization occur
+                    temp_list.append(normalize_string(string))
+                except:
+                    invalid_count += 1
+
+            if dir.get(__class__, 0) == 0:
+                dir[__class__] = [temp_list]
+            
+            else:
+                dir[__class__].append(temp_list)
+    
+    print(f'{invalid_count}/{count} were in invalid formats')
+    return dir
+
 '''
 When the structure of the data directory is somewhat like this:
 {
@@ -46,28 +72,3 @@ When the structure of the data directory is somewhat like this:
   ],
 }
 '''
-
-def normalize_dir(data):
-    count = 0
-    invalid_count = 0
-    dir = dict()
-
-    for __class__ in data.keys():
-        for __list__ in data[__class__]:
-            temp_list = list()
-            for string in __list__:
-                count += 1
-                try:
-                    # here does the normalization occur
-                    temp_list.append(normalize_string(string))
-                except:
-                    invalid_count += 1
-
-            if dir.get(__class__, 0) == 0:
-                dir[__class__] = [temp_list]
-            
-            else:
-                dir[__class__].append(temp_list)
-    
-    print(f'{invalid_count}/{count} were in invalid formats')
-    return dir
