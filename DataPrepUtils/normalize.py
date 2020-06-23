@@ -21,29 +21,29 @@ When the structure of the data directory is somewhat like this:
 {
   'POLITICS' :
   [
-    [Question, Answer],
+    [Question, Answer_1, Answer_2, ...],
     ...
-    [Question, Answer]
+    [Question, Answer_1, Answer_2, ...]
   ],
   'GOSSIP' :
   [
-    [Question, Answer],
+    [Question, Answer_1, Answer_2, ...],
     ...
-    [Question, Answer]
+    [Question, Answer_1, Answer_2, ...]
   ],
   ...
   'SCIENCE' :
   [
-    [Question, Answer],
+    [Question, Answer_1, Answer_2, ...],
     ...
-    [Question, Answer]
+    [Question, Answer_1, Answer_2, ...]
   ],
   'LITERATURE' :
   [
-    [Question, Answer],
+    [Question, Answer_1, Answer_2, ...],
     ...
-    [Question, Answer]
-  ]
+    [Question, Answer_1, Answer_2, ...]
+  ],
 }
 '''
 
