@@ -1,7 +1,22 @@
 # building the conversation dataset from the directory
-
 # function  to build the Q & A dataset
+def dataset_generator(dir):
+    dataset = []
+    for __class__ in dir.keys():
 
+        for __list__ in dir[__class__]:
+
+            for i in range(1, len(__list__)):
+                # i = 0 has the question
+
+                # __list__[i] can be a list (in case of dir being tokenized)
+                # else __list__[i] can be a string (in case of dir being normalized or raw)
+
+                dataset.append([__list__[0], __list__[i]]) # Q & A
+
+    return dataset
+
+ 
 '''
 Takes input of data directory with this structure:
 {
@@ -34,18 +49,3 @@ and returns such a structure:
 
 hence it returns a dataset/ list that has pairs of conversations
 '''
-def dataset_generator(dir):
-    dataset = []
-    for __class__ in dir.keys():
-
-        for __list__ in dir[__class__]:
-
-            for i in range(1, len(__list__)):
-                # i = 0 has the question
-
-                # __list__[i] can be a list (in case of dir being tokenized)
-                # else __list__[i] can be a string (in case of dir being normalized or raw)
-
-                dataset.append([__list__[0], __list__[i]]) # Q & A
-
-    return dataset
