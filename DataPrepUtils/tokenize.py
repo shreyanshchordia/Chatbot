@@ -7,6 +7,34 @@ def tokenize(str):
 
 '''
 Use normalize.py to normalize entire directory before tokenizing
+When the structure of the data directory is somewhat like this:
+{
+  'POLITICS' :
+  [
+    [Normalized Question, Normalized Answer_1, Normalized Answer_2, ...],
+    ...
+    [Normalized Question, Normalized Answer_1, Normalized Answer_2, ...]
+  ],
+  'GOSSIP' :
+  [
+    [Normalized Question, Normalized Answer_1, Normalized Answer_2, ...],
+    ...
+    [Normalized Question, Normalized Answer_1, Normalized Answer_2, ...]
+  ],
+  ...
+  'SCIENCE' :
+  [
+    [Normalized Question, Normalized Answer_1, Normalized Answer_2, ...],
+    ...
+    [Normalized Question, Normalized Answer_1, Normalized Answer_2, ...]
+  ],
+  'LITERATURE' :
+  [
+    [Normalized Question, Normalized Answer_1, Normalized Answer_2, ...],
+    ...
+    [Normalized Question, Normalized Answer_1, Normalized Answer_2, ...]
+  ]
+}
 '''
 def tokenize_dir(data):
     dir = dict()
