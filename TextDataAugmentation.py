@@ -7,6 +7,7 @@ downloading dependencies
 '''
 
 from WordEmbedder.WordEmbedder import Embedder
+import random
 
 '''
 Substitution Data augmentation
