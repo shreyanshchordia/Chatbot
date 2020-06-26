@@ -11,3 +11,17 @@ In the Notebook `DataPreperation.ipynb` I have prepared a structured version of 
 The file `data.pkl` has the output generated from DataPreparation.ipynb.
 
 # Completely Processed Data
+
+1. The `processed_data.pkl` file is a dictionary that has two keys:   
+
+    a. questions
+    
+    b. answers
+
+2. Each key is a list of 1329 sentences. Hence `len(processed_data['questions'])` and `len(processed_data['answers'])` is equal to 1329.
+
+3. Each sentence begins with `<sos>` tag and ends with `<eos>` tag.
+
+4. Each sentence has a fixed length of 30 words. Sentences that have short lengths are padded with the tag `<pad>`.
+
+5. By generating a Vocabulary for the data and converting the sentences into number sequences, the data becomes completely feedable to a sequence model.
