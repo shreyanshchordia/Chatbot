@@ -23,6 +23,8 @@ This project uses the ChatterbotEnglish Dataset, from Kaggle and tunes an Encode
 
 6. `TextDataAugmentation.py` is a PY file, that can be used for Data Augmentation for a Text Dataset.
 
+7. `Vocabulary.py` has the Vocabulary Class that is used for adding words to vocabulary, trimming the vocabulary size, generating Vocabulary Mapping Dictionaries and for converting sentences to number sequences.
+
 ## Bi-LSTM Encoder Decoder Model 
 
 ### Training :-
